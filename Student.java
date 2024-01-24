@@ -1,26 +1,34 @@
-package com.object;
+package com.edu;
 
-
-
-//Assign and print the roll number, 
-//phone number and address of two students having names "Sam" and "John"
-//respectively by creating two objects of class 'Student'.
-public class Student {
-	String name;
-	int roll;
-	int phoneNumber;
-  void show(String name,int roll,int phoneNumber) {
+public class Student {//user defined data type
+	//Instance Variable
+		int sid;
+		String sname;
+		float sfees;
+public Student() {//no argument constructor
+	sid=4;
+	sname="kiran";
+	sfees=874;
+}
+public Student(int sid,String sname,float sfees) {
 	
-	System.out.println("Enter your Name :"+name);
-	
-	System.out.println("Enter your Roll Number  :"+roll);
-	System.out.println("Enter your Phone Number  :"+phoneNumber);
- }
- 
+	System.out.println("constructor with Argument"+this);
+	this.sid=sid;
+	this.sname = sname;
+	this.sfees=sfees;
+}
 	public static void main(String[] args) {
-		Student s1 = new Student ();
-		s1.show("sam",101,987654456);
-		s1.show("John", 102, 9786765);
+		Student sob = new Student();
+		Student sob1= new Student(5,"Sakshi",100);
+		System.out.println("id="+sob.sid);
+		System.out.println("Name="+sob.sname);
+		System.out.println("Fees="+sob.sfees);
+//local variables need to be initialized
+//Instance variables get the default values 
+		System.out.println("id="+sob1.sid);
+		System.out.println("Name="+sob1.sname);
+		System.out.println("Fees="+sob1.sfees);
+		System.out.println("sob1="+sob1);
 	}
 
 }
