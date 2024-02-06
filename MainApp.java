@@ -1,29 +1,20 @@
-package com.edu;
-interface intf_name{ //all the interface are public
+package com.edu.exe;
 
-    int k=90;  //public static final int k=90;
-//by default interface variables are public static and final
-      void meth1();  //public abstract void meth1():
-      void meth2();
-}
+public class MainApp {
 
-class class_name implements intf_name{
-         public  void meth1(){
-                System.out.println("method1");
-               
-                
-     }
-      public void meth2(){
-               System.out.println("method2");
-    }
-}
+	public static void main(String[] args) {
+		int a=10,b=0,c=0;
+		System.out.println("Befor Division");
+		try {
+			//monitored ststement put inside try block
+		c=a/b;
+		}catch(ArithmeticException e){
+			e.printStackTrace();
+			
+		}
+		System.out.println("After Division");
+		//System.out.println("c ="+c);
 
-public class MainApp{
+	}
 
-       public  static void main(String args[]){
-    class_name myobj = new class_name();
-    myobj.meth1();
-   myobj.meth2();
-}
-    
 }
